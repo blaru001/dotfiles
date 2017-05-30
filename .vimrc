@@ -1,6 +1,11 @@
 set nocompatible
 filetype off
-:syntax on
+
+"vinilla vim stuff
+set path+=**
+set wildmenu
+
+"here be dragons .. and pluging stuff
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " This is the Vundle package, which can be found on GitHub.
@@ -24,12 +29,15 @@ Plugin 'tpope/vim-fugitive'
 "surond: allows changeing of quotes to double quotes
 Plugin 'tpope/vim-surround'
 
+"rust auto complete
+Plugin 'rust-lang/rust.vim'
+
 "completion for python ect
 "recompile for C GO or Node support or if you update
 Plugin 'Valloric/YouCompleteMe'
 
 "python auto complete - might conflict wirh YCM
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
 
 
 "snipmate adds snipits for all languages
@@ -56,7 +64,6 @@ Plugin 'maksimr/vim-jsbeautify'
 "save vim session with tmux resurect
 Plugin 'tpope/vim-obsession'
 
-filetype plugin on
 
 "note taking program for vim
 Plugin 'vimwiki/vImwIkI'
@@ -69,7 +76,7 @@ call vundle#end()            " required
 filetype plugin indent on
 
 
-set foldmethod=indent   
+set foldmethod=marker  
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
