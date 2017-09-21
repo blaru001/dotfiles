@@ -68,8 +68,27 @@ Plugin 'tpope/vim-obsession'
 "note taking program for vim
 Plugin 'vimwiki/vImwIkI'
 
+"sintax highlighting
+Plugin 'vim-syntastic/syntastic'
 
+"auto pairs
+Plugin 'jiangmiao/auto-pairs'
+
+"===========================
+"vim support for type script
+"===========================
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/vim-js-pretty-template'
+
+"see pluging install instructions
+Plugin 'Shougo/vimproc.vim'
+
+"TSserver support
+Plugin 'Quramy/tsuquyomi'
+
+"===========================================================
 " All of your Plugins must be added before the following line
+" ==========================================================
 call vundle#end()            " required
 
 " Now we can turn our filetype functionality back on
@@ -196,3 +215,17 @@ autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
  autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " " for css or scss
  autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+ "=========================="
+ " Typerscript config 
+ " ========================="
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
+"=====================================
+"config 'Quramy/vim-js-pretty-template'
+"=====================================
+autocmd FileType typescript JsPreTmpl html
+autocmd FileType typescript syn clear foldBraces
