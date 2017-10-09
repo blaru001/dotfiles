@@ -14,6 +14,7 @@ echo "linking .vimrc"
 
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 
-echo "linking .xmodmap-darkroom"
+echo "installing xkeycaps and linking .xmodmap-darkroom"
 
-ln -s ~/dotfiles/.xmodmap-darkroom  ~/.xmodmap-darkroom  
+sudo apt-get install xkeycaps
+ln -s ~/dotfiles/.xmodmap-darkroom  ~/.xmodmap-`uname -n`  
