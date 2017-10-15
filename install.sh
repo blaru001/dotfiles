@@ -2,6 +2,12 @@
 
 clear
 
+sudo apt-get install vim tmux
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 echo "linking  ls -s ~/dotfiles/.bashrc ~/.bashrc" 
 
 ln -s ~/dotfiles/.bashrc ~/.bashrc 
