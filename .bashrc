@@ -124,4 +124,4 @@ fi
 PATH="~/scripts:${PATH}"
 export PATH
 
-
+ LS_COLORS=$LS_COLORS:'di=1;32:' ; export LS_COLORS
