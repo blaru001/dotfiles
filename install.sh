@@ -3,11 +3,16 @@
 clear
 
 sudo apt-get install vim tmux
+brew install vim tmux
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+
+#====================================================
+#       link Dot Files
+#====================================================
 echo "linking  ls -s ~/dotfiles/.bashrc ~/.bashrc" 
 
 ln -s ~/dotfiles/.bashrc ~/.bashrc 
@@ -28,3 +33,14 @@ ln -s ~/dotfiles/.xmodmap-darkroom  ~/.xmodmap-`uname -n`
 echo "setup xfce4 hot keys"
 
 ln -sf ~/dotfiles/xfce4-keyboard-shortcuts.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml 
+
+#====================================
+# you complete me compiled component
+#====================================
+brew install cmake
+vim +PluginInstall +qall
+cd ~/.vim/bundle/YouCompleteMe
+#compile YCM
+./install.py --racer-completer --omni-completer 
+#
+#

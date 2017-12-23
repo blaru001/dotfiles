@@ -29,8 +29,18 @@ Plugin 'tpope/vim-fugitive'
 "surond: allows changeing of quotes to double quotes
 Plugin 'tpope/vim-surround'
 
+"=======================
+" Docker Support
+" ======================
+Plugin 'ekalinin/Dockerfile.vim'
+
+
+"=======================
+" rust supoport
+" ======================
 "rust auto complete
-Plugin 'rust-lang/rust.vim'
+"Plugin 'rust-lang/rust.vim'
+
 
 "completion for python ect
 "recompile for C GO or Node support or if you update
