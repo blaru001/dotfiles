@@ -3,12 +3,18 @@
 clear
 
 sudo apt-get install vim tmux powerline
-brew install vim tmux
+brew install vim tmux powerline
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+#===================================================
+#alias
+#==================================================
+
+# use config file when launching tmux
+alias tmux="tmux -f ~/.tmux.conf"
 
 #====================================================
 #       link Dot Files
