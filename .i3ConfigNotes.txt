@@ -1,0 +1,9 @@
+
+# config set up for i3
+
+
+# map ctrl to capslock
+setxkbmap -option ctrl:swapcaps
+
+#for background images use feh
+feh --bg-scale path

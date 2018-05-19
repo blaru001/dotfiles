@@ -5,6 +5,8 @@ filetype off
 set path+=**
 set wildmenu
 
+
+
 "here be dragons .. and pluging stuff
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -32,7 +34,7 @@ Plugin 'tpope/vim-surround'
 "=======================
 " Docker Support
 " ======================
-Plugin 'ekalinin/Dockerfile.vim'
+"Plugin 'ekalinin/Dockerfile.vim'
 
 
 "=======================
@@ -45,6 +47,11 @@ Plugin 'ekalinin/Dockerfile.vim'
 "completion for python ect
 "recompile for C GO or Node support or if you update
 Plugin 'Valloric/YouCompleteMe'
+
+"=======================
+"    Javascript support
+"=======================
+
 
 "python auto complete - might conflict wirh YCM
 "Plugin 'davidhalter/jedi-vim'
@@ -66,7 +73,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'mileszs/ack.vim' 
 
 " color sceme changer
-Plugin 'flazz/vim-colorschemes'
+Plugin 'rafi/awesome-vim-colorschemes'
+
 
 " clean up code with ctrl f
 Plugin 'maksimr/vim-jsbeautify'
@@ -103,6 +111,44 @@ call vundle#end()            " required
 
 " Now we can turn our filetype functionality back on
 filetype plugin indent on
+
+" Powerline
+set rtp+=/usr/share/powerline/bindings/vim/
+
+"Always show statusline
+set laststatus=2
+
+"Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
+
+" ===================
+" Python Programming
+" ====================
+" enable syntax highlighting
+syntax enable
+" show line numbers
+set number
+"
+"set tabs to have 4 spaces
+set ts=4
+
+" indent when moving to the next line while writing code
+set autoindent
+
+"  expand tabs into spaces
+set expandtab
+
+" when using the >> or << commands, shift lines by 4 spaces
+set shiftwidth=4
+
+" show a visual line under the cursor's current line
+ set cursorline
+
+ "show the matching part of the pair for [] {} and ()
+ set showmatch
+
+" enable all Python syntax highlighting features
+let python_highlight_all = 1
 
 
 set foldmethod=marker  
@@ -201,7 +247,7 @@ nnoremap <leader>p :CtrlP <cr>
 "toggle between relatev and abs numbers
 
 "color scheme
-colorscheme astronaut
+:colorscheme minimalist 
 
  nnoremap <leader>ln  :set rnu! <cr>
 

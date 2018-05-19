@@ -2,7 +2,7 @@
 
 clear
 
-sudo apt-get install vim tmux
+sudo apt-get install vim tmux powerline
 brew install vim tmux
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
