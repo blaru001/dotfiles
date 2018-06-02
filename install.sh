@@ -8,7 +8,7 @@ clear
 # mac specific configs
 #==================================================
 
-if ["$1" = "-m"]; then 
+if [ $1 == '-m' ];then 
   echo "mac mode activated"
 
 brew install vim tmux python
@@ -23,12 +23,14 @@ fi
 # Linux section 
 #====================================
 
-if ["$1" = "-l"]; then 
+if [ $1 == '-l' ];then 
 
   echo "Linux install"
 sudo apt-get install vim tmux powerline
 
 echo "installing xkeycaps"
+
+echo "installing xkeycaps and linking .xmodmap-darkroom"
 sudo apt-get install xkeycaps
 ln -s ~/dotfiles/.xmodmap-darkroom  ~/.xmodmap-`uname -n`  
 
@@ -69,7 +71,6 @@ echo "linking .vimrc"
 
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 
-echo "installing xkeycaps and linking .xmodmap-darkroom"
 
 
 #====================================
