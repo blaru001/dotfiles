@@ -1,0 +1,5 @@
+todo list for my dotfiles and install script
+
+add i3 config
+
+add i3 gaps to install list
