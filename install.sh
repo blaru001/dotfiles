@@ -46,6 +46,16 @@ fi
 # general install section
 #==================================================
 
+#git configuration 
+#git config --global user.email "you@example.com"
+#git config --global user.name "Your Name"
+
+
+# Vim Vundle 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+
+
 # TPM tmux package manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
