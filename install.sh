@@ -26,7 +26,7 @@ fi
 if [ $1 == '-l' ];then 
 
   echo "Linux install"
-sudo apt-get install vim tmux powerline python python3 python-pip python3-pip
+sudo apt-get install vim tmux python python3 python-pip python3-pip
 
 echo "installing xkeycaps"
 
@@ -51,7 +51,7 @@ fi
 #git config --global user.name "Your Name"
 
 #install powerline 
-pip install --user powerline-status
+sudo -H pip install --user powerline-status
 
 # Vim Vundle 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim

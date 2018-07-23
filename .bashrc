@@ -1,9 +1,10 @@
 
 
 # powerline config
- if [ -f /usr/share/powerline/bindings/bash/powerline.sh  ]; then
-     source /usr/share/powerline/bindings/bash/powerline.sh
-     fi
+# if [ -f /usr/share/powerline/bindings/bash/powerline.sh  ]; then
+ #    source /usr/share/powerline/bindings/bash/powerline.sh
+  #   fi
+. /usr/share/powerline/bindings/bash/powerline.sh
 
 # end powerline
 
