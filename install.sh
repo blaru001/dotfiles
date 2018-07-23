@@ -32,7 +32,7 @@ echo "installing xkeycaps"
 
 echo "installing xkeycaps and linking .xmodmap-darkroom"
 sudo apt-get install xkeycaps
-ln -s ~/dotfiles/.xmodmap-darkroom  ~/.xmodmap-`uname -n`  
+ln -sf ~/dotfiles/.xmodmap-darkroom  ~/.xmodmap-`uname -n`  
 
 echo "setup xfce4 hot keys"
 
@@ -71,17 +71,17 @@ alias tmux="tmux -f ~/.tmux.conf"
 #====================================================
 #       link Dot Files
 #====================================================
-echo "linking  ls -s ~/dotfiles/.bashrc ~/.bashrc" 
+echo "linking  ls -sf ~/dotfiles/.bashrc ~/.bashrc" 
 
-ln -s ~/dotfiles/.bashrc ~/.bashrc 
+ln -sf ~/dotfiles/.bashrc ~/.bashrc 
 
 echo "linking .tmux.conf"
 
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 echo "linking .vimrc"
 
-ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
 
 
 
